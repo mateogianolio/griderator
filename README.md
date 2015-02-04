@@ -7,13 +7,18 @@ A simple CSS grid generator for node.js that supports
 
 ## Usage
 
-Install via ```npm```.
+Clone this repository
+```bash
+$ git clone git@github.com:mateogianolio/griderator.git
+```
+
+.. or install via ```npm```
 
 ```bash
 $ npm install griderator
 ```
 
-Edit config and then run with
+Edit ```config.json``` and then run with
 
 ```bash
 npm start
@@ -48,7 +53,7 @@ path: css/grid.css
 size: 724 bytes
 ```
 
-Above configuration yields the following CSS:
+Above configuration yields the following code
 
 **css/grid.css**
 ```css
