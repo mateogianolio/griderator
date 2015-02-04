@@ -99,3 +99,7 @@ overflow:hidden;
 .grid [size~="5/6"]
 {width:800px}
 ```
+
+## Todo
+
+* Add optional ```padding``` attribute to config.
