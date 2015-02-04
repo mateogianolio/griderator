@@ -33,9 +33,9 @@ griderator.css('/path/to/config.json', function(error, data, path) {
 
 Callback parameters
 
-* **data** -- Either a string or a javascript object (configurable in config.json) containing the generated css.
+* **data** - Either a string or a javascript object (configurable in config.json) containing the generated css.
 
-* **path** -- Path to output css (optional).
+* **path** - Path to output css (optional).
 
 ## Example
 
@@ -43,11 +43,12 @@ Callback parameters
 ```json
 {
   "width": "960px",
+  "gutter": "10px",
   "selectors": {
     "container": ".grid",
     "element": ""
   },
-  "attribute": "size",
+  "attribute": "data-size",
   "columns": 6,
   "file": "grid.css",
   "output": "css"
@@ -78,6 +79,7 @@ margin:0 auto}
 
 [data-size]
 {width:960px;
+padding-right:10px;
 display:inline-block;
 *display:inline;
 *zoom:1;

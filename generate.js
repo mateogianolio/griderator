@@ -33,6 +33,7 @@ function parse(object) {
   selector = {};
   selector[name] = {
     "width": object.width,
+    "padding-right": object.gutter,
     "display": "inline-block",
     "*display": "inline",
     "*zoom": 1,
