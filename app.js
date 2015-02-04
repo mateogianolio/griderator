@@ -1,7 +1,7 @@
 var fs = require('fs'),
     generate = require('./lib/generate.js');
 
-generate.get('config.json', function(error, data, file) {
+generate.css('config.json', function(error, data, file) {
   if(error) {
     console.log(error);
     return;

@@ -1,7 +1,7 @@
 {
   "name": "griderator",
-  "version": "1.0.0",
-  "description": "a simple node.js grid generator",
+  "version": "1.0.1",
+  "description": "a simple node.js css grid generator",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -12,7 +12,10 @@
     "url": "https://github.com/mateogianolio/griderator.git"
   },
   "keywords": [
-    "router"
+    "grid",
+    "generator",
+    "griderator",
+    "css"
   ],
   "author": "Mateo Gianolio",
   "license": "MIT",
