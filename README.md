@@ -29,13 +29,13 @@ griderator.css('/path/to/config.json', function(error, data, path) {
   
   console.log(data);
 });
+```
 
 Callback parameters
 
 * **data** -- Either a string or a javascript object (configurable in config.json) containing the generated css.
 
 * **path** -- Path to output css (optional).
-```
 
 ## Example
 
