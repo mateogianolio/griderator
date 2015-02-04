@@ -6,7 +6,5 @@
     "element": ""
   },
   "attribute": "data-size",
-  "columns": 6,
-  "file": "grid.css",
-  "output": "css"
+  "columns": 6
 }
