@@ -6,13 +6,13 @@ A simple grid generator module for node.js.
 
 Clone this repo:
 
-```
-git clone git@github.com:mateogianolio/griderator.git
+```bash
+§ git clone git@github.com:mateogianolio/griderator.git
 ```
 
 Edit config and then run with
 
-```
+```bash
 npm start
 ```
 
@@ -20,7 +20,7 @@ npm start
 
 This config:
 
-```
+```json
 {
   "width": "960px",
   "selectors": {
@@ -33,7 +33,7 @@ This config:
 
 Yields this CSS code:
 
-```
+```css
 *
 {margin:0;
 padding:0;
