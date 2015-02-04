@@ -1,6 +1,9 @@
 # Griderator
 
-A simple CSS grid generator for node.js that works with **any** CSS width unit.
+A simple CSS grid generator for node.js that supports
+
+* any width unit.
+* any amount of columns.
 
 ## Usage
 
@@ -30,7 +33,10 @@ npm start
   "columns": 6,
   "file": "css/grid.css"
 }
+
 ```
+
+If no ```file``` is specified the code is output to stdout.
 
 ```bash
 $ npm start
