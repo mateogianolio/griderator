@@ -4,6 +4,8 @@ A simple CSS grid generator for node.js that supports
 
 * any width unit.
 * any amount of columns.
+* gutters
+* *suggestions?*
 
 ## Installation
 
