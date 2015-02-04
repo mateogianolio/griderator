@@ -1,0 +1,8 @@
+{
+  "width": "960px",
+  "selectors": {
+    "element": "div",
+    "attribute": "data-grid"
+  },
+  "columns": 3
+}

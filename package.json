@@ -1,0 +1,23 @@
+{
+  "name": "griderator",
+  "version": "1.0.0",
+  "description": "a simple node.js grid generator",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mateogianolio/griderator.git"
+  },
+  "keywords": [
+    "router"
+  ],
+  "author": "Mateo Gianolio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mateogianolio/griderator/issues"
+  },
+  "homepage": "https://github.com/mateogianolio/griderator"
+}
