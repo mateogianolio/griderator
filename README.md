@@ -21,7 +21,7 @@ npm start
 **config.json**
 ```json
 {
-  "width": "960px", // any unit works
+  "width": "960px",
   "selectors": {
     "container": ".grid",
     "element": ""
