@@ -49,7 +49,7 @@ Callback parameters
   },
   "attribute": "size",
   "columns": 6,
-  "file": "css/grid.css",
+  "file": "grid.css",
   "output": "css"
 }
 
@@ -59,7 +59,7 @@ Make sure the ```file``` output folder exists or node will throw an error. If ``
 
 Above configuration yields the following code
 
-**css/grid.css**
+**grid.css**
 ```css
 html
 {font-size:100%}
@@ -126,3 +126,7 @@ overflow:hidden;
 
 * Add optional ```padding``` attribute to config.
 * Add responsive css
+
+## Contribute
+
+Feel free to submit pull requests :)
