@@ -132,7 +132,6 @@ overflow:hidden;
 
 ## Todo
 
-* Add optional ```padding``` attribute to config.
 * Add responsive css
 
 ## Contribute
