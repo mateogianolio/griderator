@@ -1,16 +1,11 @@
-var generate = require('./lib/generate.js');
+var fs = require('fs'),
+    generate = require('./lib/generate.js');
 
-generate.get('config.json', function(error, data) {
+generate.get('config.json', function(error, data, file) {
   if(error) {
     console.log(error);
     return;
   }
-  
-  console.log('css selector object:');
-  console.log(data);
-  console.log();
-  
-  console.log('css code:');
   
   var values, out = '';
   data.forEach(function(selector) {
@@ -26,5 +21,15 @@ generate.get('config.json', function(error, data) {
     }
   });
   
-  console.log(out);
+  if(!file) {
+    console.log(out);
+    return;
+  }
+  
+  fs.writeFile(file, out, function(error) {
+    if(error) throw error;
+    
+    console.log('path: ' + file);
+    console.log('size: ' + out.length + ' bytes');
+  });
 });
