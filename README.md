@@ -52,6 +52,9 @@ Above configuration yields the following CSS:
 
 **css/grid.css**
 ```css
+html
+{font-size:100%}
+
 *
 {margin:0;
 padding:0;

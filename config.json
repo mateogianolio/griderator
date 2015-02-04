@@ -4,7 +4,7 @@
     "container": ".grid",
     "element": ""
   },
-  "attribute": "size",
+  "attribute": "data-size",
   "columns": 6,
   "file": "css/grid.css"
 }
