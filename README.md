@@ -42,7 +42,7 @@ path: css/grid.css
 size: 678 bytes
 ```
 
-The above configuration yields the CSS below:
+Above configuration yields the following CSS:
 
 **css/grid.css**
 ```css
