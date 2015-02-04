@@ -62,27 +62,33 @@ function parse(config) {
   }
   
   if(!config.output || config.output === 'css' || config.file) {
-    var values, out = '';
-    selectors.forEach(function(selector) {
-      for(key in selector) {
-        values = JSON.stringify(selector[key]).replace(/'?"/g, '').replace(/,/g, ';\n');
-
-        out += [key, values, '\n'].join('\n');
-      }
-    });
+    var css = generate(selectors);
     
     if(config.file) {
-      fs.writeFile(config.file, out, function(error) {
+      fs.writeFile(config.file, css, function(error) {
         if(error) throw error;
-        
-        console.log('successfully wrote ' + out.length + ' bytes to ' +  config.file);
+
+        console.log('successfully wrote ' + css.length + ' bytes to ' +  config.file);
       });
     }
     
-    return out;
+    return css;
   }
   
   return selectors;
+}
+
+function generate(selectors) {
+  var values, out = '';
+  selectors.forEach(function(selector) {
+    for(key in selector) {
+      values = JSON.stringify(selector[key]).replace(/'?"/g, '').replace(/,/g, ';\n');
+
+      out += [key, values, '\n'].join('\n');
+    }
+  });
+
+  return out; 
 }
 
 exports.css = function(file, callback) {
