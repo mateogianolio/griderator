@@ -36,7 +36,7 @@ npm start
 
 ```
 
-If no ```file``` is specified the code is output to stdout.
+If no ```file``` is specified the code is output to ```stdout```.
 
 ```bash
 $ npm start
