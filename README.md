@@ -54,7 +54,7 @@ position:relative;
 -moz-box-sizing:border-box;
 box-sizing:border-box}
 
-[size]
+.grid [size]
 {width:960px;
 display:inline-block;
 *display:inline;
