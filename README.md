@@ -7,12 +7,12 @@ A simple CSS grid generator for node.js that supports
 
 ## Usage
 
-Clone this repository
+To get started clone this repository
 ```bash
 $ git clone git@github.com:mateogianolio/griderator.git
 ```
 
-.. or install via ```npm```
+or install via ```npm```:
 
 ```bash
 $ npm install griderator
