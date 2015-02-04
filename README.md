@@ -24,10 +24,12 @@ This config:
 {
   "width": "960px",
   "selectors": {
-    "element": "div",
-    "attribute": "data-grid"
+    "container": ".grid",
+    "element": ""
   },
-  "columns": 3
+  "attribute": "size",
+  "columns": 6,
+  "file": "css/grid.css"
 }
 ```
 
@@ -86,6 +88,4 @@ overflow:hidden;
 
 .grid [size~="5/6"]
 {width:800px}
-
-
 ```
