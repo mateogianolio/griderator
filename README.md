@@ -2,7 +2,7 @@
 
 A simple CSS grid generator for node.js that supports
 
-* any width unit.
+* any width unit (```px```, ```%```, ```em```, you name it)
 * any amount of columns.
 * gutters
 * *suggestions?*
