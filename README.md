@@ -35,7 +35,7 @@ npm start
 ```bash
 $ npm start
 
-> griderator@1.0.0 start /path/to/griderator
+> griderator@1.0.1 start /path/to/griderator
 > node app.js
 
 path: css/grid.css
