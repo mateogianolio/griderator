@@ -1,7 +1,7 @@
 {
   "name": "griderator",
-  "version": "1.0.3",
-  "description": "a simple node.js css grid generator",
+  "version": "1.0.4",
+  "description": "a node.js css grid generator",
   "main": "generate.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

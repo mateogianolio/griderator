@@ -55,7 +55,7 @@ Callback parameters
 
 ```
 
-If no ```file``` is specified the code is output to ```stdout```.
+Make sure the ```file``` output folder exists or node will throw an error. If ```output``` is anything other than ```css```, a javascript object containing the css will be returned.
 
 Above configuration yields the following code
 
