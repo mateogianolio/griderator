@@ -1,7 +1,7 @@
 var fs = require('fs');
 
-function parse(object) {
-  var width = parseInt(object.width);
+function parse(config) {
+  var width = parseInt(config.width);
   var name, selector, selectors = [];
   
   selectors.push({
@@ -21,19 +21,19 @@ function parse(object) {
     }
   });
   
-  name = object.selectors.container;
+  name = config.selectors.container;
   selector = {};
   selector[name] = {
-    "width": object.width,
+    "width": config.width,
     "margin": "0 auto"
   };
   selectors.push(selector);
   
-  name = '[' + object.attribute + ']';
+  name = '[' + config.attribute + ']';
   selector = {};
   selector[name] = {
-    "width": object.width,
-    "padding-right": object.gutter,
+    "width": config.width,
+    "padding-right": config.gutter,
     "display": "inline-block",
     "*display": "inline",
     "*zoom": 1,
@@ -43,25 +43,25 @@ function parse(object) {
   };
   selectors.push(selector);
   
-  for(var i = 1; i <= object.columns; i++) {
-    for(var j = i; j <= object.columns; j++) {
+  for(var i = 1; i <= config.columns; i++) {
+    for(var j = i; j <= config.columns; j++) {
       if(i == j) continue;
       if(i > 1 && !(j % i)) continue;
       
-      name = object.selectors.element + '[';
-      name += object.attribute;
+      name = config.selectors.element + '[';
+      name += config.attribute;
       name += '~="' + i + '/' + j + '"]';
       
       selector = {};
       selector[name] = {
-        "width": ((i / j) * width) + (object.width.split(/(\d+)(?!.*\d)/).pop()),
+        "width": ((i / j) * width) + (config.width.split(/(\d+)(?!.*\d)/).pop()),
       };
       
       selectors.push(selector);
     }
   }
   
-  if(!object.output || object.output === 'css' || object.file) {
+  if(!config.output || config.output === 'css' || config.file) {
     var values, out = '';
     selectors.forEach(function(selector) {
       for(key in selector) {
@@ -71,11 +71,11 @@ function parse(object) {
       }
     });
     
-    if(object.file) {
-      fs.writeFile(object.file, out, function(error) {
+    if(config.file) {
+      fs.writeFile(config.file, out, function(error) {
         if(error) throw error;
         
-        console.log('successfully wrote ' + out.length + ' bytes to ' +  object.file);
+        console.log('successfully wrote ' + out.length + ' bytes to ' +  config.file);
       });
     }
     
