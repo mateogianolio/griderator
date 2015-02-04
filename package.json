@@ -1,10 +1,9 @@
 {
   "name": "griderator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a simple node.js css grid generator",
-  "main": "app.js",
+  "main": "generate.js",
   "scripts": {
-    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -60,8 +60,29 @@ function parse(object) {
     }
   }
   
+  if(!object.output || object.output === 'css' || object.file) {
+    var values, out = '';
+    selectors.forEach(function(selector) {
+      for(key in selector) {
+        values = JSON.stringify(selector[key]).replace(/'?"/g, '').replace(/,/g, ';\n');
+
+        out += [key, values, '\n'].join('\n');
+      }
+    });
+    
+    if(object.file) {
+      fs.writeFile(object.file, out, function(error) {
+        if(error) throw error;
+        
+        console.log('successfully wrote ' + out.length + ' bytes to ' +  object.file);
+      });
+    }
+    
+    return out;
+  }
+  
   return selectors;
-};
+}
 
 exports.css = function(file, callback) {
   fs.readFile(file, 'utf8', function(error, data) {
@@ -73,6 +94,9 @@ exports.css = function(file, callback) {
     data = JSON.parse(data);
     var css = parse(data);
     
-    callback(null, css, data.file);
+    if(!css)
+      callback('error: could not generate css', null, null);
+    else
+      callback(null, css, data.file);
   });
 };

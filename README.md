@@ -5,23 +5,36 @@ A simple CSS grid generator for node.js that supports
 * any width unit.
 * any amount of columns.
 
-## Usage
+## Installation
 
-To get started clone this repository
-```bash
-$ git clone git@github.com:mateogianolio/griderator.git
-```
-
-or install via ```npm```:
+Install via ```npm```
 
 ```bash
 $ npm install griderator
 ```
 
-Edit ```config.json``` and then run with
+## Usage
 
-```bash
-npm start
+Include in your project with
+
+```javascript
+var griderator = require('griderator');
+```
+
+Generate grid by calling
+
+```javascript
+griderator.css('/path/to/config.json', function(error, data, path) {
+  if(error) throw error;
+  
+  console.log(data);
+});
+
+Callback parameters
+
+* **data** -- Either a string or a javascript object (configurable in config.json) containing the generated css.
+
+* **path** -- Path to output css (optional).
 ```
 
 ## Example
@@ -36,22 +49,13 @@ npm start
   },
   "attribute": "size",
   "columns": 6,
-  "file": "css/grid.css"
+  "file": "css/grid.css",
+  "output": "css"
 }
 
 ```
 
 If no ```file``` is specified the code is output to ```stdout```.
-
-```bash
-$ npm start
-
-> griderator@1.0.2 start /path/to/griderator
-> node app.js
-
-path: css/grid.css
-size: 724 bytes
-```
 
 Above configuration yields the following code
 
@@ -121,3 +125,4 @@ overflow:hidden;
 ## Todo
 
 * Add optional ```padding``` attribute to config.
+* Add responsive css
