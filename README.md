@@ -1,6 +1,6 @@
 # Griderator
 
-A simple grid generator module for node.js.
+A simple CSS grid generator module for node.js.
 
 ## Usage
 
