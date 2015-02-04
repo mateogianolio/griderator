@@ -4,10 +4,10 @@ A simple CSS grid generator module for node.js.
 
 ## Usage
 
-Clone this repo:
+Install via ```npm```.
 
 ```bash
-§ git clone git@github.com:mateogianolio/griderator.git
+$ npm install griderator
 ```
 
 Edit config and then run with
