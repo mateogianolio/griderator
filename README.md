@@ -1,6 +1,6 @@
 # Griderator
 
-A simple CSS grid generator module for node.js.
+A simple CSS grid generator for node.js that works with **any** CSS width unit.
 
 ## Usage
 
@@ -21,7 +21,7 @@ npm start
 **config.json**
 ```json
 {
-  "width": "960px",
+  "width": "960px", // any unit works
   "selectors": {
     "container": ".grid",
     "element": ""
