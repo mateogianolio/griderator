@@ -41,11 +41,11 @@ If no ```file``` is specified the code is output to stdout.
 ```bash
 $ npm start
 
-> griderator@1.0.1 start /path/to/griderator
+> griderator@1.0.2 start /path/to/griderator
 > node app.js
 
 path: css/grid.css
-size: 678 bytes
+size: 724 bytes
 ```
 
 Above configuration yields the following CSS:
