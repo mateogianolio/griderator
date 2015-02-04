@@ -13,6 +13,12 @@ Install via ```npm```
 $ npm install griderator
 ```
 
+Test with
+
+```bash
+$ npm test
+```
+
 ## Usage
 
 Include in your project with

@@ -1,0 +1,12 @@
+{
+  "width": "960px",
+  "gutter": "10px",
+  "selectors": {
+    "container": ".grid",
+    "element": ""
+  },
+  "attribute": "data-size",
+  "columns": 6,
+  "file": "test/grid.css",
+  "output": "css"
+}
