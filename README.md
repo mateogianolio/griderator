@@ -18,8 +18,7 @@ npm start
 
 ## Example
 
-This config:
-
+**config.json**
 ```json
 {
   "width": "960px",
@@ -33,8 +32,19 @@ This config:
 }
 ```
 
-Yields this CSS code:
+```bash
+$ npm start
 
+> griderator@1.0.0 start /path/to/griderator
+> node app.js
+
+path: css/grid.css
+size: 678 bytes
+```
+
+The above configuration yields the CSS below:
+
+**css/grid.css**
 ```css
 *
 {margin:0;
