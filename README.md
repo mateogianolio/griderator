@@ -114,7 +114,7 @@ griderator.save = function(file, data, callback)
   },
   "attribute": "data-size",
   "collapse": "960px",
-  "columns": 6,
+  "columns": 6
 }
 
 ```
