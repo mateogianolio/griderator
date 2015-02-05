@@ -2,12 +2,12 @@
 
 A simple CSS grid generator for Node.js that supports
 
-* any width unit (```px```, ```%```, ```em```, you name it)
+* any width unit (```px```, ```%```, ```em```, you name it).
 * any amount of columns.
-* gutters
-* collapsing
+* gutters (currently in the form of ```padding```).
+* collapsing at given width.
 
-Outputs CSS to a file, to a string or to a javascript array.
+Generates CSS to a file, to a string or to a javascript array.
 
 ## Installation
 
@@ -31,33 +31,79 @@ Include in your project with
 var griderator = require('griderator');
 ```
 
-Generate grid by calling
+This module consists of two high level functions:
 
 ```javascript
-// data returned is a css string
-griderator.css('/path/to/config.json', '/path/to/output.css', function(error, data, path) {
-  if(error) throw error;
-  
-  console.log(data);
-});
+griderator.css = function(file, path, callback)
 ```
 
-Or
+* **```file```**
+    * Path to ```config.json```.
+
+* **```path```** (optional)
+    * Output path.
+
+* **```callback(error, data, path)```**
+    * ```error```
+      * Error message or ```null```.
+    * ```data```
+      * A string with the generated CSS.
+    * ```path```
+      * Output path.
 
 ```javascript
-// data returned is a javascript array
-griderator.js('/path/to/config.json', function(error, data) {
-  if(error) throw error;
-  
-  console.log(data);
-});
+griderator.js = function(file, callback)
 ```
 
-### Callback parameters
+* **```file```**
+    * Path to ```config.json```.
 
-* **data** - Either a string or a javascript object (configurable in config.json) containing the generated css.
+* **```callback(error, data)```**
+    * ```error```
+      * Error message or ```null```.
+    * ```data```
+      * A javascript array containing the generated CSS.
 
-* **path** - Path to output css (optional).
+Together with these lower level helper functions declared in ```tools.js```:
+
+```javascript
+/* @returns
+ * an array containing the generated CSS. */
+griderator.parse = function(config)
+```
+
+* **```config```**
+    * A javascript array containing data from ```config.json```.
+
+```javascript
+/* @returns
+ * an array of the loaded data */
+griderator.load = function(file, callback)
+```
+
+* **```file```**
+    * Path to ```config.json```.
+
+* **```callback(error, data, path)```**
+    * ```error```
+      * Error message or ```null```.
+    * ```data```
+      * An array with the loaded data.
+
+```javascript
+/* @returns
+ * path to saved data. */
+griderator.save = function(file, data, callback)
+```
+
+* **```file```**
+    * Output path.
+
+* **```callback(error, path)```**
+    * ```error```
+      * Error message or ```null```.
+    * ```path```
+      * Output path.
 
 ## Example
 
