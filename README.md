@@ -76,8 +76,6 @@ griderator.parse = function(config)
     * A javascript array containing data from ```config.json```.
 
 ```javascript
-/* @returns
- * an array of the loaded data */
 griderator.load = function(file, callback)
 ```
 
@@ -91,8 +89,6 @@ griderator.load = function(file, callback)
       * An array with the loaded data.
 
 ```javascript
-/* @returns
- * path to saved data. */
 griderator.save = function(file, data, callback)
 ```
 
