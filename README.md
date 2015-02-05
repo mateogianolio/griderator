@@ -39,10 +39,8 @@ griderator.css = function(file, path, callback)
 
 * **```file```**
     * Path to ```config.json```.
-
 * **```path```** (optional)
     * Output path.
-
 * **```callback(error, data, path)```**
     * ```error```
       * Error message or ```null```.
@@ -57,7 +55,6 @@ griderator.js = function(file, callback)
 
 * **```file```**
     * Path to ```config.json```.
-
 * **```callback(error, data)```**
     * ```error```
       * Error message or ```null```.
@@ -73,7 +70,7 @@ griderator.parse = function(config)
 ```
 
 * **```config```**
-    * A javascript array containing data from ```config.json```.
+   * A javascript array containing data from ```config.json```.
 
 ```javascript
 griderator.load = function(file, callback)
@@ -81,7 +78,6 @@ griderator.load = function(file, callback)
 
 * **```file```**
     * Path to ```config.json```.
-
 * **```callback(error, data, path)```**
     * ```error```
       * Error message or ```null```.
@@ -94,7 +90,6 @@ griderator.save = function(file, data, callback)
 
 * **```file```**
     * Output path.
-
 * **```callback(error, path)```**
     * ```error```
       * Error message or ```null```.
