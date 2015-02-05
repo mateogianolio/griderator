@@ -64,7 +64,9 @@ griderator.js = function(file, callback)
     * ```data```
       * A javascript array containing the generated CSS.
 
-Together with these lower level helper functions declared in ```tools.js```:
+## Tools
+
+In addition to the above pair of functions, ```tools.js``` contains these lower level helper functions:
 
 ```javascript
 /* @returns
