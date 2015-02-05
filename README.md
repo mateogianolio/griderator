@@ -31,7 +31,7 @@ Include in your project with
 var griderator = require('griderator');
 ```
 
-This module consists of two high level functions:
+This module consists of two high level functions
 
 ```javascript
 griderator.css = function(file, path, callback)
@@ -66,7 +66,7 @@ griderator.js = function(file, callback)
 
 ## Tools
 
-In addition to the above pair of functions, ```tools.js``` contains these lower level helper functions:
+In addition to the above pair of functions, ```tools.js``` contains these lower level helper functions
 
 ```javascript
 /* @returns
