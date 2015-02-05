@@ -8,6 +8,10 @@ exports.css = function(file, path, callback) {
     selectors.forEach(function(selector) {
       for(key in selector) {
         values = JSON.stringify(selector[key]).replace(/'?"/g, '').replace(/,/g, ';\n');
+        
+        if(key[0] === '@')
+          values = values.replace(/:/, ' ');
+        
         out += [key, values, '\n'].join('\n');
       }
     });

@@ -1,6 +1,6 @@
 {
   "name": "griderator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "a node.js css grid generator",
   "main": "generate.js",
   "scripts": {

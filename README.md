@@ -5,12 +5,13 @@ A simple CSS grid generator for Node.js that supports
 * any width unit (```px```, ```%```, ```em```, you name it)
 * any amount of columns.
 * gutters
+* collapsing
 
 Outputs CSS to a file, to a string or to a javascript array.
 
 ## Installation
 
-Install via ```npm```
+Clone or install via ```npm```
 
 ```bash
 $ npm install griderator
@@ -52,7 +53,7 @@ griderator.js('/path/to/config.json', function(error, data) {
 });
 ```
 
-Callback parameters
+### Callback parameters
 
 * **data** - Either a string or a javascript object (configurable in config.json) containing the generated css.
 
@@ -70,17 +71,17 @@ Callback parameters
     "element": ""
   },
   "attribute": "data-size",
+  "collapse": "960px",
   "columns": 6,
 }
 
 ```
 
+```collapse``` is optional. If set, a ```@media``` query will be added making the grid collapse at that width.
+
 Above configuration yields the following CSS:
 
 ```css
-html
-{font-size:100%}
-
 *
 {margin:0;
 padding:0;
@@ -102,6 +103,9 @@ display:inline-block;
 vertical-align:top;
 overflow:hidden;
 *overflow:visible}
+
+@media screen and (max-width: 960px)
+{[data-size] {width:100% !important}}
 
 [data-size~="1/2"]
 {width:480px}
@@ -161,6 +165,7 @@ Or this Javascript array:
        'vertical-align': 'top',
        overflow: 'hidden',
        '*overflow': 'visible' } },
+  { '@media screen and (max-width: 960px)': { '[data-size]': [Object] } },
   { '[data-size~="1/2"]': { width: '480px' } },
   { '[data-size~="1/3"]': { width: '320px' } },
   { '[data-size~="1/4"]': { width: '240px' } },
@@ -177,7 +182,7 @@ Or this Javascript array:
 
 ## Todo
 
-* Add support for SASS?
+* Add support for CSS preprocessors?
 
 ## Contribute
 

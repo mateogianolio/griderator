@@ -43,6 +43,14 @@ exports.parse = function(config) {
   };
   selectors.push(selector);
   
+  var media = '@media screen and (max-width: ' + config.collapse + ')';
+  selector = {};
+  selector[media] = {};
+  selector[media][name] = {
+    "width": "100% !important"
+  };
+  selectors.push(selector);
+  
   for(var i = 1; i <= config.columns; i++) {
     for(var j = i; j <= config.columns; j++) {
       if(i == j) continue;

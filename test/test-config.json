@@ -6,5 +6,6 @@
     "element": ""
   },
   "attribute": "data-size",
+  "collapse": "960px",
   "columns": 6
 }
