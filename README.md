@@ -1,5 +1,7 @@
 # Griderator
 
+[![npm](https://img.shields.io/npm/dm/griderator.svg?style=flat-square)]()
+
 A simple CSS grid generator for Node.js that supports
 
 * any width unit (```px```, ```%```, ```em```, you name it).
